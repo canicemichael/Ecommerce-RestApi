@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const users = require('./routes/users');
+const authRoute = require('./routes/auth');
 
 mongoose.connect(process.env.MONGO_URL)
     .then(()=> console.log('DB connection successful'))
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
+app.use('/api/auth', authRoute);
 app.use('/api/users', users);
 
 app.listen(process.env.PORT, () => {
