@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "22a55a8d-4c30-4156-b3dd-c158a651b0f1",
+		"name": "EcommerceApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dondada\",\r\n    \"email\": \"dondad@gmail.com\",\r\n    \"password\": \"dondada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dondada\",\r\n    \"password\": \"dondada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDAwMTc0MSwiZXhwIjoxNjQwMjYwOTQxfQ.FoVjdqYHiin77Zhd-79KrFt59CUfs4V0RtL7Rns0wo8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"makkyzek234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/users/61c0628f699c4ee2f2375366",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61c0628f699c4ee2f2375366"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/users/find/61bb0d20d3d02556b6b594e2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"61bb0d20d3d02556b6b594e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/users/find/61bb0d20d3d02556b6b594e2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"61bb0d20d3d02556b6b594e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER STATS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/users/find/61bb0d20d3d02556b6b594e2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"61bb0d20d3d02556b6b594e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"puma tshirt\",\r\n    \"desc\": \"test\",\r\n    \"img\": \"test\",\r\n    \"categories\": [\"tshirt\", \"man\"],\r\n    \"size\": \"M\",\r\n    \"color\": \"gray\",\r\n    \"price\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/products/find/61c98c5c435b567395f234cf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"find",
+						"61c98c5c435b567395f234cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/products/?new=true",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "new",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDM0NDYzMSwiZXhwIjoxNjQwNjAzODMxfQ.L3je42VKy63Gu08JUOKycBcAygPX3C_JrfBtQ-MSYr0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/products/61c98c5c435b567395f234cf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"61c98c5c435b567395f234cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD ORDER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDY1MTg5NywiZXhwIjoxNjQwOTExMDk3fQ.iX01UvJWiH_ufwC6iLOpie1FRwrLUyv4yFHLdR-adZs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61bb0d20d3d02556b6b594e2\",\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"rata1d4\",\r\n            \"quatity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"56eretwr\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"amount\": 65,\r\n    \"address\": \"Nigermina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INCOME",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzA2MjhmNjk5YzRlZTJmMjM3NTM2NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDY1MTg5NywiZXhwIjoxNjQwOTExMDk3fQ.iX01UvJWiH_ufwC6iLOpie1FRwrLUyv4yFHLdR-adZs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61bb0d20d3d02556b6b594e2\",\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"rata1d4\",\r\n            \"quatity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"56eretwr\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"amount\": 65,\r\n    \"address\": \"Nigermina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
