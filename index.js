@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URL)
     })
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}))
+app.use(express.urlencoded({ extended: true}));
 app.use('/api/auth', authRoute);
 app.use('/api/users', users);
 app.use('/api/products', productRoute);
