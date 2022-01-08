@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const User = require('../models/User');
+const { User, validateUser } = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 //REGISTER
 router.post('/register', async (req, res) => {
+    const { error } = validateUser(req.body);
+    if (error) return res.status(400).json(error.details[0].message);
 
     const newUser = new User({
         username: req.body.username,

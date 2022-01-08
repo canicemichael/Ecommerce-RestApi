@@ -1,10 +1,13 @@
 const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require('../middleware/verifyToken');
 const bcrypt = require('bcrypt');
-const User = require('../models/User');
+const { User, validateUser } = require('../models/User');
 const router = require('express').Router();
 
 //UPDATE USER
 router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
+    const { error } = validateUser(req.body);
+    if (error) return res.status(400).json(error.details[0].message);
+    
     //first tin we need to findout where the token belongs to, client or Admin
     if (req.body.password) {
         const salt = await bcrypt.genSalt(10);

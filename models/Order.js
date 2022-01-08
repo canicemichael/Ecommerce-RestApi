@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Joi = require('joi');
 
 const OrderSchema = new mongoose.Schema({
     userId: {
@@ -16,4 +17,23 @@ const OrderSchema = new mongoose.Schema({
     status: { type: String, default: 'pending' }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Order', OrderSchema);
+const Order = mongoose.model('Order', OrderSchema);
+
+const validateOrder = (data) => {
+    const schema = Joi.object({
+        userId: Joi.string().min(5).max(50).required(),
+        products: Joi.array().items(
+            Joi.object({
+                productId: Joi.string(),
+                quantity: Joi.number()
+            })
+        ),
+        amount: Joi.number().required(),
+        address: Joi.object().required(),
+        status: Joi.string()
+    })
+    return schema.validate(data);
+}
+
+exports.Order = Order;
+exports.validateOrder = validateOrder;

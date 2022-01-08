@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Joi = require('joi');
 
 const ProductSchema = new mongoose.Schema({
     title: {
@@ -29,4 +30,20 @@ const ProductSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Product', ProductSchema);
+const Product = mongoose.model('Product', ProductSchema);
+
+const validateProduct = (data) => {
+    const schema = Joi.object({
+        title: Joi.string().required().unique(),
+        desc: Joi.string().required(),
+        img: Joi.string().required(),
+        categories: Joi.array(),
+        size: Joi.string(),
+        color: Joi.string(),
+        price: Joi.string().required(),
+    })
+    return schema.validate(data);
+}
+
+exports.Product = Product;
+exports.validateProduct = validateProduct;
