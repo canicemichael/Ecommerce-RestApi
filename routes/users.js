@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const router = require('express').Router();
 
+//UPDATE USER
 router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
     //first tin we need to findout where the token belongs to, client or Admin
     if (req.body.password) {
@@ -43,7 +44,7 @@ router.get('/find/:id', verifyTokenAndAdmin, async (req, res)=>{
         
         const { password, ...others} = user._doc;
 
-        res.status(500).json(others);
+        res.status(200).json(others);
     } catch (err){
         res.status(500).json(err);
     }

@@ -1,11 +1,14 @@
 const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require('./verifyToken');
 
 const bcrypt = require('bcrypt');
-const Cart = require('../models/Cart');
+const { Cart, validateCart } = require('../models/Cart');
 const router = require('express').Router();
 
 //CREATE CART
 router.post('/', verifyToken, async (req, res) => {
+    const { error } = validateCart(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+
     const newCart = new Cart(req.body);
 
     try {
@@ -18,6 +21,8 @@ router.post('/', verifyToken, async (req, res) => {
 
 //UPDATE CART
 router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
+    const { error } = validateCart(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
 
     try {
         const updatedCart = await Cart.findByIdAndUpdate(
@@ -28,8 +33,7 @@ router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
             { new: true }
         );
 
-        const { password, ...others } = updatedCart._doc;
-        res.status(200).json(others);
+        res.status(200).json(updatedCart);
     } catch (err) {
         res.send(`something failed + ${err}`);
     }

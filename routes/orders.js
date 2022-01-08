@@ -28,8 +28,7 @@ router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
             { new: true }
         );
 
-        const { password, ...others } = updatedOrder._doc;
-        res.status(200).json(others);
+        res.status(200).json(updatedOrder);
     } catch (err) {
         res.send(`something failed + ${err}`);
     }
