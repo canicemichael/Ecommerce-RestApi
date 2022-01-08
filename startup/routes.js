@@ -7,7 +7,7 @@ const productRoute = require('../routes/products');
 const cartRoute = require('../routes/carts');
 const orderRoute = require('../routes/orders');
 const stripeRoute = require('../routes/stripe');
-const { error, logger } = require('./middleware/error');
+const { error, logger } = require('../middleware/error');
 
 module.exports = function(app){
     app.use(cors());

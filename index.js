@@ -1,16 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
+
 const app = express();
-const dotenv = require('dotenv');
 
-dotenv.config();
-
-
-
-
-
+require('./startup/dotenv')();
 require('./startup/logging')();
-
+require('./startup/validation')();
 require('./startup/routes')(app);
 
 require('./startup/db')();
