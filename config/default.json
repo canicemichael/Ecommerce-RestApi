@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "",
+    "db": "mongodb+srv://canice:canice@cluster0.f4ws4.mongodb.net/shop?retryWrites=true&w=majority"
+}

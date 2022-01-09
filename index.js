@@ -6,6 +6,7 @@ require('./startup/dotenv')();
 require('./startup/logging')();
 require('./startup/validation')();
 require('./startup/routes')(app);
+require('./startup/config')();
 
 require('./startup/db')();
 
