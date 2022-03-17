@@ -36,3 +36,5 @@ const verifyTokenAndAdmin = (req, res, next) => {
 };
 
 module.exports = { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin };
+
+// export vidly_jwtPrivateKey=mySecureKey. or set vidly_jwtPrivateKey=mySecureKey.
