@@ -3,7 +3,7 @@ const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = requir
 const { Order, validateOrder } = require('../models/Order');
 const router = require('express').Router();
 
-//CREATE ORDER
+//CREATE A NEW ORDER
 router.post('/', verifyToken, async (req, res) => {
     const { error } = validateOrder(req.body);
     if (error) return res.status(400).json(error.details[0].message);
@@ -46,7 +46,7 @@ router.get('/find/:userId', verifyTokenAndAuthorization, async (req, res)=>{
 
 //GET ALL ORDERS
 router.get('/', verifyTokenAndAdmin, async (req, res) => {
-    const orders = await Order.findOne({});
+    const orders = await Order.find({});
     res.status(200).json(orders);
 })
 
