@@ -34,7 +34,7 @@ const Product = mongoose.model('Product', ProductSchema);
 
 const validateProduct = (data) => {
     const schema = Joi.object({
-        title: Joi.string().required().unique(),
+        title: Joi.string().required(),
         desc: Joi.string().required(),
         img: Joi.string().required(),
         categories: Joi.array(),

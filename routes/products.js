@@ -36,7 +36,7 @@ router.delete('/:id', verifyTokenAndAdmin, async (req, res)=>{
     res.status(200).json('product has been deleted');
 })
 
-//GET PRODUCT
+//GET A PARTICULAR PRODUCT
 router.get('/find/:id', async (req, res)=>{
     const product = await Product.findById(req.params.id);
     
