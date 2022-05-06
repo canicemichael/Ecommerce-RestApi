@@ -33,7 +33,7 @@ router.put('/:id', verifyTokenAndAdmin, async (req, res) => {
 //DELETE ORDER
 router.delete('/:id', verifyTokenAndAdmin, async (req, res)=>{
     await Order.findByIdAndDelete(req.params.id);
-    res.status(200).json('cart has been deleted');
+    res.status(200).json('order has been deleted');
 })
 
 //GET USER ORDERS
