@@ -26,13 +26,13 @@ router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
     res.status(200).json(others);
 })
 
-//DELETE
+//DELETE a user
 router.delete('/:id', verifyTokenAndAuthorization, async (req, res)=>{
     await User.findByIdAndDelete(req.params.id);
     res.status(200).json('The user with the given ID has been deleted');
 })
 
-//GET USER
+//GET a particular USER
 router.get('/find/:id', verifyTokenAndAdmin, async (req, res)=>{
     const user = await User.findById(req.params.id);
     
@@ -51,7 +51,7 @@ router.get('/', verifyTokenAndAdmin, async (req, res)=>{
     res.status(500).json(users);
 })
 
-//GET USER STATS
+//GET USER STATS (explain what stats mean)
 router.get('/stats', verifyTokenAndAdmin, async (req, res) => {
     const date = new Date();
     const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
