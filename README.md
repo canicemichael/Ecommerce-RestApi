@@ -1,3 +1,11 @@
-# Ecommerce RestApi
-## Built an ecommerce Rest Api, implemented the CRUD operations, fetching data with queries and advanced MongoDB and implemented the JSON web token for user and admin verification inorder to provide security. Implemented stripe payment method to receive payment from client side.
+## Ecommerce RestApi
+This project is the backend service of an imaginary e-commerce app
+
+### Setup
+Make sure to follow all these steps exactly as explained below. Do not miss any steps or you won't be able to run this application.
+
+### Install MongoDB
+
+
+
 Check out [the postman documentation](https://documenter.getpostman.com/view/16601080/Uyxbqpqx).
