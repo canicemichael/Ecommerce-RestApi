@@ -2,7 +2,8 @@
 This project is the backend service of an imaginary e-commerce app
 
 ## Run it locally
-1. To run this project, you need to install the latest version of MongoDB Community Edition first.[https://docs.mongodb.com/manual/installation/](https://docs.mongodb.com/manual/installation/)
+1. To run this project, you need to install the latest version of MongoDB Community Edition first.
+[https://docs.mongodb.com/manual/installation/](https://docs.mongodb.com/manual/installation/)
 2. Create a cloudinary account to get an API key and secret code
 ```
 git clone https://github.com/canicemichael/Ecommerce-RestApi.git
