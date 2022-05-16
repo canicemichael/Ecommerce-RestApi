@@ -24,6 +24,13 @@ npm i
 - MongoDB - The database for modern applications
 - Mongoose - Elegant MongoDB object modeling for Node.js
 
+Create a .env file (or just export manually in the terminal) in the root of the project and add the following:
+```
+MONGO_URL = '<url>'
+API_KEY='<key>'
+JWT_SEC='<secret>'
+```
+
 ## Start the Server
 ```
 npm run start
