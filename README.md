@@ -1,3 +1,3 @@
-# ecommerce
-An E-commerce app where products can be created, put in carts and ordered by users.
-A very simple e-commerce app.
+# Ecommerce RestApi
+## Built an ecommerce Rest Api, implemented the CRUD operations, fetching data with queries and advanced MongoDB and implemented the JSON web token for user and admin verification inorder to provide security. Implemented stripe payment method to receive payment from client side.
+Check out [the postman documentation](https://documenter.getpostman.com/view/16601080/Uyxbqpqx).
