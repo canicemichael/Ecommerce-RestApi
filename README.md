@@ -30,7 +30,7 @@ npm run start
 ```
 This will launch the Node server on port 5000. If that port is busy, you can set a different point in config/default.json.
 
-Open up your browser and head over to:
+Open up your postman and head over to the localhost to test accordingly:
 
 http://localhost:5000
 
