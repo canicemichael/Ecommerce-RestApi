@@ -12,5 +12,5 @@ require('./startup/db')();
 
 
 app.listen(process.env.PORT, () => {
-    console.log('Backend Server started');
+    console.log(`Backend Server started at localhost ${process.env.PORT}`);
 })

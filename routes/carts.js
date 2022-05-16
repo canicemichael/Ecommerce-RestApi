@@ -36,7 +36,7 @@ router.delete('/:id', verifyTokenAndAuthorization, async (req, res)=>{
     res.status(200).json('cart has been deleted');
 })
 
-//GET USER PRODUCT
+//GET USER CART
 router.get('/find/:userId', verifyTokenAndAuthorization, async (req, res)=>{
     // const cart = await Cart.findById(req.params.id);
     const cart = await Cart.findOne({ userId: req.params.userId});
@@ -46,7 +46,7 @@ router.get('/find/:userId', verifyTokenAndAuthorization, async (req, res)=>{
     res.status(200).json(cart);
 })
 
-// //GET ALL
+//GET ALL
 router.get('/', verifyTokenAndAdmin, async (req, res) => {
     const carts = await Cart.findOne({});
     res.status(200).json(carts);
