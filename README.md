@@ -1,13 +1,13 @@
 ## Ecommerce RestApi
 This project is the backend service of an imaginary e-commerce app
 
-## Setup
-Make sure to follow all these steps exactly as explained below. Do not miss any steps or you won't be able to run this application.
-
-## Install MongoDB
-To run this project, you need to install the latest version of MongoDB Community Edition first.
-
-[https://docs.mongodb.com/manual/installation/](https://docs.mongodb.com/manual/installation/)
+## Run it locally
+1. To run this project, you need to install the latest version of MongoDB Community Edition first.[https://docs.mongodb.com/manual/installation/](https://docs.mongodb.com/manual/installation/)
+2. Create a cloudinary account to get an API key and secret code
+```
+git clone https://github.com/canicemichael/Ecommerce-RestApi.git
+cd Ecommerce-RestApi
+```
 
 Once you install MongoDB, make sure it's running.
 
@@ -16,6 +16,12 @@ Next, from the project folder, install the dependencies:
 ```
 npm i
 ```
+
+## Built With
+- Node.js - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine
+- express - Fast, unopinionated, minimalist web framework for Node.js
+- MongoDB - The database for modern applications
+- Mongoose - Elegant MongoDB object modeling for Node.js
 
 ## Start the Server
 ```
